@@ -1,5 +1,7 @@
 # @dragon-talon/dsh-openspec
 
+[English](README.md) | 中文
+
 > 面向 DeepSeek Harness (DSH) 的 OpenSpec 工作流技能与 `/opsx-*` 命令别名。
 
 [![GitHub](https://img.shields.io/badge/GitHub-dragonTalon%2Fdsh--openspec-181717?logo=github)](https://github.com/dragonTalon/dsh-openspec)

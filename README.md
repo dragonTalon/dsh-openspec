@@ -1,5 +1,7 @@
 # @dragon-talon/dsh-openspec
 
+English | [中文](README.zh-CN.md)
+
 > OpenSpec workflow skills and `/opsx-*` command aliases for DeepSeek Harness (DSH).
 
 [![GitHub](https://img.shields.io/badge/GitHub-dragonTalon%2Fdsh--openspec-181717?logo=github)](https://github.com/dragonTalon/dsh-openspec)
