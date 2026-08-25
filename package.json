@@ -1,5 +1,5 @@
 {
-  "name": "@dragonTalon/dsh-openspec",
+  "name": "@dragon-talon/dsh-openspec",
   "description": "OpenSpec workflow skills and /opsx-* command aliases for DeepSeek Harness",
   "version": "0.0.1",
   "publishConfig": {

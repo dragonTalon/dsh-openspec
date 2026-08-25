@@ -1,4 +1,4 @@
-# @dragonTalon/dsh-openspec
+# @dragon-talon/dsh-openspec
 
 > 面向 DeepSeek Harness (DSH) 的 OpenSpec 工作流技能与 `/opsx-*` 命令别名。
 
@@ -57,7 +57,7 @@ npm install github:dragonTalon/dsh-openspec
 >
 > ```yaml
 > allowBuilds:
->   - "@dragonTalon/dsh-openspec"
+>   - "@dragon-talon/dsh-openspec"
 > ```
 
 ## 使用
@@ -70,7 +70,7 @@ npm install github:dragonTalon/dsh-openspec
 ### 配置
 
 ```ts
-import * as dshOpenspec from '@dragonTalon/dsh-openspec'
+import * as dshOpenspec from '@dragon-talon/dsh-openspec'
 
 ctx.plugin(dshOpenspec, { aliases: false }) // 关闭 /opsx-* 别名
 ```

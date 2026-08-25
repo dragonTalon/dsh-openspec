@@ -1,4 +1,4 @@
-# @dragonTalon/dsh-openspec
+# @dragon-talon/dsh-openspec
 
 > OpenSpec workflow skills and `/opsx-*` command aliases for DeepSeek Harness (DSH).
 
@@ -57,7 +57,7 @@ npm install github:dragonTalon/dsh-openspec
 >
 > ```yaml
 > allowBuilds:
->   - "@dragonTalon/dsh-openspec"
+>   - "@dragon-talon/dsh-openspec"
 > ```
 
 ## Usage
@@ -70,7 +70,7 @@ Once registered, both forms are available in DSH:
 ### Configuration
 
 ```ts
-import * as dshOpenspec from '@dragonTalon/dsh-openspec'
+import * as dshOpenspec from '@dragon-talon/dsh-openspec'
 
 ctx.plugin(dshOpenspec, { aliases: false }) // disable the /opsx-* aliases
 ```

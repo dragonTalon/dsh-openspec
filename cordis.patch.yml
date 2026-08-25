@@ -1,5 +1,5 @@
 # dsh-openspec bundle layer: register the OpenSpec skill plugin.
-# Installed via `dsh plugin --profile <name> add @dragonTalon/dsh-openspec`.
+# Installed via `dsh plugin --profile <name> add @dragon-talon/dsh-openspec`.
 - insert:
     - id: dsh-openspec
-      name: '@dragonTalon/dsh-openspec'
+      name: '@dragon-talon/dsh-openspec'

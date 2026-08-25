@@ -1,13 +1,13 @@
 /**
- * Package-owned invariant companion for `@dragonTalon/dsh-openspec`.
- * @module @dragonTalon/dsh-openspec/invariant
+ * Package-owned invariant companion for `@dragon-talon/dsh-openspec`.
+ * @module @dragon-talon/dsh-openspec/invariant
  */
 
 /* jscpd:ignore-start */
 import type { Context } from '@deepseek-ai/cordis'
 import type { InvariantInstaller } from '@deepseek-ai/dsh-invariants'
 
-const PACKAGE_NAME = '@dragonTalon/dsh-openspec'
+const PACKAGE_NAME = '@dragon-talon/dsh-openspec'
 
 /** Cordis companion plugin name. */
 export const name = 'dsh-openspec-invariant'
