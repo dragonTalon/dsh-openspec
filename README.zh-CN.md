@@ -6,7 +6,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-dragonTalon%2Fdsh--openspec-181717?logo=github)](https://github.com/dragonTalon/dsh-openspec)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![OpenSpec](https://img.shields.io/badge/OpenSpec-1.10.0-6e56cf)](https://github.com/Fission-AI/OpenSpec)
+[![OpenSpec](https://img.shields.io/badge/OpenSpec-1.14.1-6e56cf)](https://github.com/Fission-AI/OpenSpec)
 
 这是一个面向 DeepSeek Harness 的 [Cordis](https://github.com/cordiverse/cordis) 插件,负责注册 12 个规范的 [OpenSpec](https://github.com/Fission-AI/OpenSpec) 工作流技能(使用其 kebab-case 名称)——从而 `/openspec-new-change` 可以通过 DSH 的用户指令注入和 `skill` 工具原生工作——同时提供 Claude 风格的 `/opsx-<id>` 命令别名(仅用户可调用,解析到对应规范技能的正文)。
 
@@ -16,7 +16,7 @@
 
 ## 对应的 OpenSpec 版本
 
-本包将 OpenSpec 工作流技能固定在 **OpenSpec 1.10.0**([`@fission-ai/openspec`](https://www.npmjs.com/package/@fission-ai/openspec),源码:[`Fission-AI/OpenSpec`](https://github.com/Fission-AI/OpenSpec))。
+本包将 OpenSpec 工作流技能固定在 **OpenSpec 1.14.1**([`@fission-ai/openspec`](https://www.npmjs.com/package/@fission-ai/openspec),源码:[`Fission-AI/OpenSpec`](https://github.com/Fission-AI/OpenSpec))。
 
 技能正文由 [`scripts/sync-openspec-skills.mjs`](scripts/sync-openspec-skills.mjs) 从 OpenSpec 仓库的 `skills/*/SKILL.md` 文件生成。详见[同步技能](#同步技能)。
 
