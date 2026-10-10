@@ -25,6 +25,24 @@ export const inject = ['skills']
 /** Runtime-source label for both the canonical skills and their command aliases. */
 const SOURCE: SkillSource = 'runtime'
 
+/**
+ * Routing-description overrides for skills whose generated descriptions
+ * collide. Kept out of `src/skills.ts` so `npm run sync:skills` cannot
+ * overwrite them. The leading signal is the batch-vs-incremental axis that
+ * distinguishes `openspec-ff-change` from `openspec-continue-change`.
+ */
+export const DESCRIPTION_OVERRIDES: Readonly<Record<string, string>> = {
+  'openspec-ff-change':
+    'Fast-forward OpenSpec artifact creation: generate ALL artifacts for a change in ONE run, without stopping between them. Use when the user wants everything created at once (e.g. "ff" / "fast-forward").',
+  'openspec-continue-change':
+    'Continue an OpenSpec change by creating exactly ONE next artifact, then stop. Use when the user wants to step through artifacts one at a time (e.g. "continue").',
+}
+
+/** Return the effective routing description for a skill name. */
+export function descriptionFor(name: string, fallback: string): string {
+  return DESCRIPTION_OVERRIDES[name] ?? fallback
+}
+
 export interface Config {
   /**
    * Register the `/opsx-<id>` command aliases as user-only skills
@@ -46,7 +64,7 @@ export function apply(ctx: Context, config: Config = {}): void {
   for (const skill of OPENSPEC_SKILLS) {
     ctx.skills.register({
       name: skill.name,
-      description: skill.description,
+      description: descriptionFor(skill.name, skill.description),
       content: skill.content,
       source: SOURCE,
     })
@@ -58,7 +76,7 @@ export function apply(ctx: Context, config: Config = {}): void {
     if (canonical === undefined) continue
     ctx.skills.register({
       name: `opsx-${id}`,
-      description: canonical.description,
+      description: descriptionFor(canonical.name, canonical.description),
       content: canonical.content,
       source: SOURCE,
       // Command aliases answer only the human `/opsx-<id>` gesture; the model

@@ -1,7 +1,7 @@
 {
   "name": "@dragon-talon/dsh-openspec",
   "description": "OpenSpec workflow skills and /opsx-* command aliases for DeepSeek Harness",
-  "version": "0.0.2",
+  "version": "0.3.0",
   "publishConfig": {
     "access": "public"
   },
@@ -44,8 +44,8 @@
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
-    "@deepseek-ai/dsh-invariants": "^0.1.1-rc.2",
-    "@deepseek-ai/dsh-skill": "^0.1.1-rc.2"
+    "@deepseek-ai/dsh-invariants": "^0.2.0-rc.2",
+    "@deepseek-ai/dsh-skill": "^0.2.0-rc.2"
   },
   "devDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",

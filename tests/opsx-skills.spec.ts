@@ -20,7 +20,7 @@ describe('dsh-openspec skill registration', () => {
     for (const skill of OPENSPEC_SKILLS) {
       const summary = byName.get(skill.name)
       expect(summary, skill.name).toBeDefined()
-      expect(summary?.description).toBe(skill.description)
+      expect(summary?.description).toBe(dshOpenspec.descriptionFor(skill.name, skill.description))
       expect(summary?.invocation).toEqual({ modelInvocable: true, userInvocable: true })
     }
   })
@@ -41,7 +41,22 @@ describe('dsh-openspec skill registration', () => {
       expect(alias, aliasName).toBeDefined()
       expect(canonical, canonicalName).toBeDefined()
       expect(alias?.content).toBe(canonical?.content)
+      expect(summary?.description).toBe(canonical?.description)
     }
+  })
+
+  it('sharpens ff/continue descriptions to distinguish batch vs incremental', async () => {
+    const ctx = await setup()
+    const byName = new Map((await ctx.skills.list()).map((skill) => [skill.name, skill]))
+
+    const ff = byName.get('openspec-ff-change')
+    const continueSkill = byName.get('openspec-continue-change')
+
+    expect(ff?.description).toContain('generate ALL artifacts')
+    expect(ff?.description).toContain('in ONE run')
+    expect(continueSkill?.description).toContain('exactly ONE next artifact')
+    expect(continueSkill?.description).toContain('then stop')
+    expect(ff?.description).not.toBe(continueSkill?.description)
   })
 
   it('omits aliases when config.aliases is false', async () => {
