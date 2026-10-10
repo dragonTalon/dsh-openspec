@@ -41,21 +41,21 @@
 
 本包面向 DeepSeek Harness,由宿主提供其 peer 依赖(`@deepseek-ai/cordis`、`@deepseek-ai/dsh-invariants`、`@deepseek-ai/dsh-skill`)。
 
-从本仓库将插件安装到 DSH profile:
+从 npm 将插件安装到 DSH profile:
 
 ```bash
-dsh plugin --profile <name> add github:dragonTalon/dsh-openspec
+dsh plugin --profile <name> add @dragon-talon/dsh-openspec
 ```
 
 或添加到普通 Node 项目:
 
 ```bash
-npm install github:dragonTalon/dsh-openspec
+npm install @dragon-talon/dsh-openspec
 ```
 
-> `dsh plugin add` 会转发给 `pnpm add`,因此任何 pnpm 安装参数都可用——`github:owner/repo`、`git+https://…`、tarball 或本地路径。
+> `dsh plugin add` 会转发给 `pnpm add`,因此任何 pnpm 安装参数都可用——版本范围(`@dragon-talon/dsh-openspec@0.3.0`)、`github:owner/repo`、`git+https://…`、tarball 或本地路径。
 >
-> 从 git 安装时,会通过本包的 `prepare` 脚本在安装阶段构建。`pnpm` 默认会拦截 git 依赖的构建脚本——如果它拒绝执行构建,请把本包加入 profile 目录下 `pnpm-workspace.yaml` 的 `allowBuilds` 后重试:
+> 改为从 git URL(而非 npm)安装时,会通过本包的 `prepare` 脚本在安装阶段构建。`pnpm` 默认会拦截 git 依赖的构建脚本——如果它拒绝执行构建,请把本包加入 profile 目录下 `pnpm-workspace.yaml` 的 `allowBuilds` 后重试:
 >
 > ```yaml
 > allowBuilds:
